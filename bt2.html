@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Change feet to metter and nguoc lai</title>
+    </head>
+
+    <body>
+        Nhập Số <input type="text" id="input" oninput="change()" onchange="change()">
+        <select name="" id="doi" onchange="change()">
+            <option value="f">Feet</option>
+            <option value="m">Metter</option>
+        </select>
+        <div id="kq"> Result:....</div>
+        <script>
+            function changeFeet(num) {
+                feet = 3.279 * num;
+                return feet;
+            }
+            function changeMetter(num) {
+                metter = 0.305 * num;
+                return metter;
+            }
+            
+            function check() {
+                let flag = document.getElementById('doi').value;
+                if (flag === "m") {
+                    return flag;
+                } else if (flag === "f") {
+                    return flag;
+                } else {
+                    alert("Chọn lại loại tiền");
+                }
+            }
+            function change() {
+                let num = document.getElementById('input').value;
+                if (check() === "m") {
+                    document.getElementById('kq').innerHTML = "Result: " + changeFeet(num) + " feet";
+                }
+                if ((check() === "f")) {
+                    document.getElementById('kq').innerHTML = "Result: " + changeMetter(num) + " m";
+                }
+            }
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>

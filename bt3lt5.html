@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let name = prompt('Nhập tên ngôi sao');
+        let names = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let str = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        function change(a) {
+            for (let i = 0; i < names.length; i++) {
+                if (a ===names[i]){ 
+                    return str[i];
+
+                }
+            } return "";
+        }
+        let result=change(name);
+        if(result==""){
+            document.write('Tên Ngôi sao không có trong dữ liệu');
+        } else {
+            document.write('Ngôi sao của   '+name +' Là '+result);
+        }
+    </script>
+</body>
+
+</html>
